@@ -14,4 +14,20 @@ defmodule PaysafeAPI.CustomNimbleOptions do
 
     {:ok, ip_address}
   end
+
+  def country(value) do
+    if is_binary(value) && String.length(value) == 2 do
+      {:ok, String.upcase(value)}
+    else
+      {:error, "expected a 2 character country but got #{inspect(value)}"}
+    end
+  end
+
+  def state(value) do
+    if is_binary(value) && String.length(value) == 2 do
+      {:ok, String.upcase(value)}
+    else
+      {:error, "expected a 2 character state but got #{inspect(value)}"}
+    end
+  end
 end

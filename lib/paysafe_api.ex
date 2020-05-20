@@ -129,11 +129,11 @@ defmodule PaysafeAPI do
         ],
         state: [
           required: false,
-          type: :string
+          type: {:custom, CustomNimbleOptions, :country, []}
         ],
         country: [
           required: false,
-          type: :string
+          type: {:custom, CustomNimbleOptions, :country, []}
         ],
         zip: [
           required: false,
