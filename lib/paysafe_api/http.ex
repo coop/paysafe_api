@@ -71,6 +71,10 @@ defmodule PaysafeAPI.HTTP do
     Enum.map(links, &Map.new/1)
   end
 
+  defp do_to_map("settlements", settlements) do
+    Enum.map(settlements, &to_map/1)
+  end
+
   defp do_to_map(_key, value) when is_list(value) do
     to_map(value)
   end
