@@ -21,9 +21,9 @@ defmodule PaysafeAPI.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:finch, "~> 0.2"},
+      {:finch, "~> 0.5"},
       {:jason, "~> 1.2"},
-      {:nimble_options, "~> 0.2"}
+      {:nimble_options, "~> 0.3"}
     ]
   end
 end
